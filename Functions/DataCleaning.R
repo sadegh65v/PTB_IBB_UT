@@ -1,10 +1,9 @@
 
-
 # Load data
 
 # input_folder= "../Data/training_data_2022-07-21/"
-  
-load_cleaned_data <- function(input_folder) {
+
+construct_cleaned_data <- function(input_folder) {
   main=getwd()
   setwd(input_folder)
   sv = read.csv('sv_counts/sp_sv_long.csv',stringsAsFactors=T)
@@ -78,8 +77,5 @@ load_cleaned_data <- function(input_folder) {
   
   save(all_data, metadata, was_term, file='all_data.RData')
   
-  # rm(list=ls())
-  load('all_data.RData')
   setwd(main)
 }
-
