@@ -12,6 +12,7 @@ Adaboost=function(Class,Features){
 
 
 
+
   
 ######################################################
 ## predictions function
